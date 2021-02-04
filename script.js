@@ -52,9 +52,9 @@ window.addEventListener('DOMContentLoaded', () => {
             this.disabled = false;
             this.style.cursor = 'pointer';
             timeUp = true;
+            if (score > bestScore.textContent) {
+                bestScore.textContent = score;
+            } 
         }, 10000);
-        if (score > bestScore.textContent) {
-            bestScore.textContent = score;
-        } 
     });
 });
