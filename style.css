@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Potta One', cursive;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72);
+    color: red;
+}
+body {
+    height: 100vh;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper {
+    width: 800px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+}
+.text {
+    text-transform: uppercase;
+    font-size: 45px;
+}
+.btn {
+    width: 100px;
+    height: 45px;
+    font-size: 20px;
+    margin-top: 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    outline: none;
+    text-transform: uppercase;
+}
+.game {
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.potato {
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 100px;
+    margin: 50px 25px;
+}
+.potato:before {
+    display: block;
+    background: url('image/potato.png') center center/cover no-repeat;
+    background-size: contain;
+    content: '';
+    width: 100%;
+    height:70px;
+    position: absolute;
+    z-index: 1;
+    bottom: -30px;
+}
+.luka {
+    background: url('image/lukashka.png') center center/cover no-repeat;
+    background-size: contain;
+    width: 200px;
+    height: 100px;
+    transition:all 0.4s;
+    position: absolute;
+    top: 100%;
+    cursor: crosshair;
+}
+.potato.up .luka {
+    top: 0;
+}
